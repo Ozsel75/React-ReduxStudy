@@ -23,5 +23,10 @@ Redux ı react ile uygulama
                 iki tane parametre alır state ve action 
 
 5 - yazılan reducer store a tanıtılır ve store oluşturulur. 
+    - redux kütüphanesinden {createStore} , {combineReduder} isimli fonksiyon kullanılarak store oluşturulur. const rootReducer = combineReducers({}) bütün reducer lar rootReducer a toplanır. 
 
 6 - Oluşturulan store react-redux içerisinde bulunan Provider isimli özel bir component ile App.js sarılarak react uygulamasına store tanıtılır. 
+    index.js içinde import store , import Provider , 
+        <Provider store={store}>
+        <App />
+        </Provider>
