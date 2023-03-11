@@ -1,0 +1,27 @@
+Redux ı react ile uygulama
+
+1 - 2 tane kütüphaneye ihtiyacımız var. 1 redux 2 react-redux
+    npm install redux 
+    npm install react-redux
+
+2 - Redux Dosya yapısı kurulur.
+    src altına redux klasörü oluştur.
+        redux klasörü içine actions ve reducers klasörü oluştur.
+        redux klasörü içine store.js oluştur.
+
+3 - Yeni kavramlar reduxla ilgili
+    subscribe : abone olmak. 
+    React için redux işleyişi : 
+        a - Store daki state in güncel haline ihtiyaç duyan her component store a abone olur (subscribe). Bu abonelik sürecinde devreye react-redux kütüphanesi girer. react-redux içerisindeki {useSelector} isimli hook store a abone olmayı sağlar.
+        b- store daki state i değiştirmek için dispatch ile bir action göndermek lazım. React tarafında dispatch işlemi react-redux kütüphanesinde bulunan {useDispatch} isimli hook ile yapılır. 
+
+4 - reducer yazılır. 
+    - store daki her bir state için ayrı bir reducer yazılır. 
+        - reducer yazma adımları : 
+            1 - başlangıç state i oluşturulur. const initialState={[]}
+            2 - bir fonksiyon olan reducer yazılır.  const todosReducer=(state=initialState, action) => {};
+                iki tane parametre alır state ve action 
+
+5 - yazılan reducer store a tanıtılır ve store oluşturulur. 
+
+6 - Oluşturulan store react-redux içerisinde bulunan Provider isimli özel bir component ile App.js sarılarak react uygulamasına store tanıtılır. 
